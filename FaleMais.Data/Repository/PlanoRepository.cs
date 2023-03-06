@@ -8,12 +8,7 @@ using FaleMais.Domain.Interfaces;
 namespace FaleMais.Data.Repository
 {
     public class PlanoRepository : IPlanoRepository
-    {
-        public void Add(Plano plano)
-        {
-            _plano.Add(plano);
-        }
-
+    {  
         public List<Plano> Get()
         {
             return _plano.ToList();
@@ -22,11 +17,6 @@ namespace FaleMais.Data.Repository
         public Plano Get(Guid id)
         {
             return _plano.FirstOrDefault(p => p.Id == id);
-        }
-
-        public void Remove(Plano plano)
-        {
-            _plano.Remove(plano);
         }
 
         private readonly List<Plano> _plano = new List<Plano>

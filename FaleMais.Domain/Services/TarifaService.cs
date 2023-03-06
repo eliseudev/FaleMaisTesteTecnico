@@ -18,11 +18,6 @@ namespace FaleMais.Domain.Services
             _planoRepository = planoRepository;
         }
 
-        public List<string> GetLocais()
-        {
-            return _tarifaRepository.GetLocais();
-        }
-
         public List<Plano> GetPlanos()
         {
             return _planoRepository.Get();

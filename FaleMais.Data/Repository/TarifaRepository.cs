@@ -29,16 +29,6 @@ namespace FaleMais.Data.Repository
             return _tarifa.FirstOrDefault(t => t.Origem.Equals(origem) && t.Destino.Equals(destino));
         }
 
-        public List<string> GetLocais()
-        {
-            return _tarifa.Select(t => t.Origem).Distinct().ToList();
-        }
-
-        public void Remove(Tarifa tarifa)
-        {
-            _tarifa.Remove(tarifa);
-        }
-
         private readonly List<Tarifa> _tarifa = new List<Tarifa>
         {
             new Tarifa("011", "016", 1.90),

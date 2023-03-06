@@ -8,8 +8,6 @@ namespace FaleMais.Domain.Interfaces
 	{
 		List<Plano> Get();
 		Plano Get(Guid id);
-		void Add(Plano plano);
-		void Remove(Plano plano);
 	}
 }
 
